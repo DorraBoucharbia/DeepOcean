@@ -1,0 +1,239 @@
+.ocean-scene {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ocean-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .jounta{
+    right: 55%;
+    bottom: 110px;
+    position: absolute;
+    height: 22%;
+  }
+
+
+  .merza9{
+    right: 30%;
+    bottom:20%;
+    position: absolute;
+      }
+
+      .joint{
+        left: 27.5%;
+        bottom:215px;
+        position: absolute;
+        height: 13%;
+          }
+
+
+      
+      .bubble {
+        position: absolute;
+        background-color: rgba(12, 55, 70, 0.655); /* Light blue color */
+        border-radius: 50%;
+        animation: bubbleAnimation 5s ease-in-out infinite;
+        box-shadow: 0 0 10px rgba(134, 171, 183, 0.5); /* Realistic shadow effect */
+      }
+      
+      .small {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .medium {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .large {
+        width: 40px;
+        height: 40px;
+      }
+      
+      @keyframes bubbleAnimation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-100px);
+        }
+        99.9% {
+          transform: translateY(-200px);
+        }
+        100% {
+          opacity: 0; /* Make the bubble disappear at 100% height */
+          transform: translateY(-200px);
+        }
+      }
+      
+      .bubble.medium {
+        animation-delay: 4s; /* Delay the animation start for the medium bubble */
+      }
+      
+      .bubble.large {
+        animation-delay: 8s; /* Delay the animation start for the large bubble */
+      }
+
+
+      .smoke {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        background: radial-gradient(circle, rgb(101, 96, 96) 10%, rgba(255,255,255,0) 100%);
+        border-radius: 50%;
+        animation: smokeAnimation 5s ease-in-out infinite;
+        opacity: 0;
+        right: 61%;
+        bottom: 175px;
+      }
+      
+      @keyframes smokeAnimation {
+        0% {
+          transform: scale(0.5);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      .fish {
+        position: absolute;
+        width: 100px; /* Adjust the size of the fish image */
+        height: auto;
+        animation: swimAnimation 10s linear infinite;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      
+      @keyframes swimAnimation {
+        /* Start position - off-screen to the left */
+        0% {
+            transform: translateX(10vw);
+        }
+        
+        /* End position - off-screen to the right */
+        100% {
+            transform: translateX(-200vw);
+        }
+
+        
+    
+      }
+
+      /* Container settings */
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Glass image */
+  .glass {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* Kerch image animation */
+  .kerch {
+    position: absolute;
+    height: 20%;
+    bottom: 150px;
+    right: 200px;
+    animation: circularMotion 10s linear infinite;
+  }
+  
+  @keyframes circularMotion {
+    from {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+  
+ .drink{
+    position: absolute;
+    height: 20%;
+    bottom: 54%;
+    right: 38%;
+ }
+
+ .drop{
+    position: absolute;
+    height: 10%;
+    right: 44%;
+    bottom: 30%;
+ }
+
+
+ .kaabour{
+    position: absolute;
+    height: 10%;
+    left: 20%;
+    top: 55%;
+ }
+
+.radio{
+    position: absolute;
+    height: 10%;
+    left: 25%;
+    bottom: 20%;
+
+}
+
+.dam{
+
+    position: absolute;
+    height: 20%;
+    bottom: 210px;
+    right: 190px;
+}
+
+  
+  /* Keyframes for moving from bottom to top */
+  @keyframes moveUp {
+    0% {
+      transform: translate(-50%, 100%); /* Start below the container */
+      opacity: 0; /* Start invisible */
+    }
+    50% {
+      opacity: 1; /* Fully visible midway */
+    }
+    100% {
+      transform: translate(-50%, -100%); /* End above the container */
+      opacity: 0; /* Fade out at the end */
+    }
+  }
+  
+  /* Stagger animations for each image */
+  .ghanghouna:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .ghanghouna:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .ghanghouna:nth-child(3) {
+    animation-delay: 2s;
+  }
+  .ghanghouna:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
